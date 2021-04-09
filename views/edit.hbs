@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Редактирование пользователя</title>
+    <meta charset="utf-8" />
+    <style>.field{width:180px;}</style>
+</head>
+<body>
+    <h1>Редактирование пользователя</h1>
+     <form action="/edit" method="POST" enctype='multipart/form-data'>
+        <input type="hidden" name="id" value="{{user.userid}}" />
+        <label>Имя</label><br>
+        <input name="firstName" value="{{user.firstName}}"  class="field" /><br><br>
+        <label>Имя</label><br>
+        <input name="lastName" value="{{user.lastName}}"  class="field" /><br><br>
+        <label>Фото</label><br>
+        <textarea rows="50" style="width: 70%"  name="image" value=""  >{{user.image}}</textarea><br><br>
+        <label>PDF</label><br>
+        <textarea rows="50" style="width: 70%" name="image" value=""  >{{user.pdf}}</textarea><br><br>
+        <input type="file" name='image'><br><br>
+
+        <input type="submit" value="Отправить" />
+     </form>
+     <a href="/">К списку пользователей</a>
+</body>
+<html>
